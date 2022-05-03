@@ -1,11 +1,5 @@
 const path = require('path');
-const dotenv = require("dotenv")
-
-const environmentFiles = ['../.env', '../../Common/.env.common'];
-environmentFiles.forEach(pathToEnv => {
-    const resolvedPath = path.resolve(__dirname, pathToEnv);
-    dotenv.config({ path: resolvedPath });
-});
+require('../../Common/loadEnviromentVariables')(__dirname);
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
     enabled: process.env.ANALYZE === 'true',
