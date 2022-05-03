@@ -1,7 +1,4 @@
 {
-  "exclude": [
-    "node_modules/*"
-  ],
   "compilerOptions": {
     "target": "es5",
     "lib": [
@@ -14,16 +11,29 @@
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+    "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": [
+        "components/*"
+      ],
+      "@common/*": [
+        "../../Common/*"
+      ]
+    }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
