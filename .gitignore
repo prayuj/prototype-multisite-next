@@ -5,7 +5,7 @@
 /coverage
 
 # next.js
-/.next/
+/Site*/src/.next/
 /out/
 
 # production
